@@ -16,7 +16,7 @@ app.use(foodRouter);
 app.use(clotheRouter);
 app.use('*', notFound);
 app.use(serverError);
-const listen = (port) => {
+const start = (port) => {
   app.listen(port, () => {
     console.log('The app is listening on the port: ', port);
   });
@@ -24,5 +24,5 @@ const listen = (port) => {
 
 module.exports = {
   app: app,
-  listen: listen,
+  listen: start,
 };
