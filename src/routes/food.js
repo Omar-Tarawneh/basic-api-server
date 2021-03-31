@@ -28,10 +28,10 @@ const deleteFood = (req, res) => {
   res.status(200).json(response);
 };
 
-router.get('/food', getFood);
-router.get('/food/:id', getFoodById);
-router.post('/food', createFood);
-router.put('/food/:id', updateFood);
-router.delete('/food/:id', deleteFood);
+router.get('/', getFood);
+router.get('/:id', getFoodById);
+router.post('/', createFood);
+router.put('/:id', updateFood);
+router.delete('/:id', deleteFood);
 
 module.exports = router;

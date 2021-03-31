@@ -12,8 +12,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(logger);
-app.use(foodRouter);
-app.use(clotheRouter);
+app.use('/food', foodRouter);
+app.use('/clothes', clotheRouter);
 app.use('*', notFound);
 app.use(serverError);
 const start = (port) => {

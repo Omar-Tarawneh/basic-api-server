@@ -29,10 +29,10 @@ const deleteClothe = (req, res) => {
   res.status(200).json(response);
 };
 
-router.get('/clothes', getClothes);
-router.get('/clothes/:id', getClothesById);
-router.post('/clothes', createClothes);
-router.put('/clothes/:id', updateClothe);
-router.delete('/clothes/:id', deleteClothe);
+router.get('/', getClothes);
+router.get('/:id', getClothesById);
+router.post('/', createClothes);
+router.put('/:id', updateClothe);
+router.delete('/:id', deleteClothe);
 
 module.exports = router;
